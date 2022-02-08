@@ -1,0 +1,17 @@
+{
+  "name": "form-validate-example",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "serve": "rm -rf .parcel/serve && parcel --cache-dir .parcel/cache --dist-dir .parcel/serve src/index.html --open",
+    "bundle": "rm -rf dist && parcel build --public-url \"./\" --no-source-maps --cache-dir .parcel/cache --dist-dir dist src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-elm": "^2.2.1",
+    "elm": "^0.19.1-5",
+    "parcel": "^2.2.1"
+  }
+}
