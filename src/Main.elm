@@ -146,7 +146,7 @@ update msg model =
             let
                 {-
                    The second parameter to this tuple will be `Maybe User`.
-                   You can decide do whatever you want with this, maybe you
+                   You can decide to do whatever you want with this, maybe you
                    serialize it to json and submit a POST request?
                 -}
                 ( updatedModel, _ ) =
