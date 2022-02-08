@@ -190,7 +190,7 @@ update msg model =
 
 view : Model -> Browser.Document Msg
 view model =
-    { title = "Form Validate Example"
+    { title = "Elm Form Validation Example"
     , body =
         [ H.main_ []
             [ H.h1 [] [ H.text "Example Form" ]
