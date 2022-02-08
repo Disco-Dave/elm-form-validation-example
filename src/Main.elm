@@ -110,7 +110,7 @@ parseAge model =
                             "Age must be greater than or equal to " ++ String.fromInt minAge ++ "."
 
                         Age.IsGreaterThanMaxAge maxAge ->
-                            "Age must be greater than or equal to " ++ String.fromInt maxAge ++ "."
+                            "Age must be less than or equal to " ++ String.fromInt maxAge ++ "."
             in
             ( { model | ageError = description }
             , Nothing
