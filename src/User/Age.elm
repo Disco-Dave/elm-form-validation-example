@@ -40,7 +40,7 @@ make age =
         Err (IsLessThanMinAge minAge)
 
     else if age > maxAge then
-        Err (IsGreaterThanMaxAge minAge)
+        Err (IsGreaterThanMaxAge maxAge)
 
     else
         Ok (Age age)
