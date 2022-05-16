@@ -99,15 +99,17 @@ numberInput config =
 
 type alias Form msg =
     { id : String
+    , enableSubmit : Bool
     , onSubmit : msg
     , onReset : msg
     }
 
 
 {-| preventDefault() the form submission so that it doesn't refresh the page
-    
-    This function is actually just taken from the docs here: 
+
+    This function is actually just taken from the docs here:
     https://package.elm-lang.org/packages/elm/html/latest/Html-Events#preventDefaultOn
+
 -}
 onSubmit : msg -> H.Attribute msg
 onSubmit msg =
@@ -120,7 +122,7 @@ form config contents =
         buttons =
             H.div []
                 [ H.button [ A.type_ "reset", E.onClick config.onReset ] [ H.text "Reset" ]
-                , H.button [ A.type_ "submit" ] [ H.text "Submit" ]
+                , H.button [ A.type_ "submit", A.disabled (not config.enableSubmit) ] [ H.text "Submit" ]
                 ]
     in
     H.form

@@ -194,7 +194,18 @@ view model =
     , body =
         [ H.main_ []
             [ H.h1 [] [ H.text "Example Form" ]
-            , Form.form { id = "example-form", onSubmit = SubmitClicked, onReset = ResetClicked }
+            , Form.form
+                { id = "example-form"
+                , enableSubmit =
+                    case parseUser model of
+                        ( _, Just _ ) ->
+                            True
+
+                        _ ->
+                            False
+                , onSubmit = SubmitClicked
+                , onReset = ResetClicked
+                }
                 [ Form.textInput
                     { id = "email"
                     , label = "Email"
